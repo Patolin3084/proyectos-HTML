@@ -1,0 +1,72 @@
+
+:root{
+    --primary-color: rgba(253, 253, 251, 0.61);
+    --secundary-color: #00007a;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 100px;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+header nav{
+    width: fit-content;
+    height: 50px;
+    margin-top: auto;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: var(--primary-color);
+    transition: background-color 2s ease-in-out 0s; 
+}
+header nav:hover{
+    background-color: rgba(116, 114, 114, 0.822);
+}
+
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.centrarflex{
+    justify-content: center;
+}
+.forma{
+    margin: 10px;
+    border-radius: 20px;
+}
+.dropdown {
+position: static;
+display: inline-block;
+}
+nav ul li a{
+    color: var(--secundary-color);
+}
+.grande{
+    font-size: 25px;
+    color: var(--secundary-color);
+}
+.pequeña{
+    font-size: 20px;
+    color: black;
+}
+footer nav ul li{
+    transition: property-width 5s ease-in-out 0s;
+}
+footer nav ul li:hover{
+    font-size: 50px;
+}

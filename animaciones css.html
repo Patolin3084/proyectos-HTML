@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones y Animaciones Css</title>
+    <style>
+    .container{
+        margin: 20px;
+    }
+
+    .example{
+        margin-bottom: 40px;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: lightblue;
+        transition: var(--transition-property) var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
+    }
+    .transition-property-width:hover .box{
+        width: 200px;
+    }
+    .transition-property-heigth:hover .box{
+        height: 200px;
+    }
+    .transition-property-color:hover .box{
+        background-color: coral;
+    }
+    .transition-property-transform:hover .box{
+        rotate: 45deg;
+    }
+
+    /*animacion*/
+
+    @keyframes animation-example{
+        0% {background-color: lightblue; left: 0px; top: 0px;}
+        25% {background-color: lightgreen; left: 200px; top: 0px;}
+        50% {background-color: lightcoral; left: 200px; top: 200px;}
+        75% {background-color: lightgoldenrodyellow; left: 0px; top: 200px;}
+        100% {background-color: lightblue; left: 0px; top: 0px;}
+    }
+
+    .animation-example{
+        height: 500px;
+    }
+
+    .animation-example .box{
+        position: relative; 
+        animation: var(--animation-name) var(--animation-duration) var(--animation-timing-function) var(--animation-delay)
+                                 var(--animation-iteration-count) var(--animation-direction) var(--animation-fill-mode);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Transiciones y animacions Css</h1>
+        <h2>Transiciones</h2>
+        <p>Las transciciones en Css permiten cambiar suavemente de un estilo a otro. Puedes especificar la duración, la funcion de tiempo y la demora para las transiciones</p>
+        <p>Los principales parametros para definir una transicion son: </p>
+        
+        <ul>
+            <li><strong>--transition-property: </strong> La propiedad Css a la que se aplica la transición( por ejemplo, <code>width</code>, <code>height</code>, <code>background-color</code>, <code>transform</code>).</li>
+            <li><strong>--transition-duration: </strong> La duracion de la transición (por ejemplo, <code>2s</code> para dos segundos).</li>
+            <li><strong>--transition-timing-function: </strong> La funcion de temporización que define la velocidad de la transición a lo largo del tiempo (por ejemplo, <code>easy-in-out</code>).</li>
+            <li><strong>--transition-delay: </strong>El retraso antes de que comience la transición (por ejemplo, <code>0s</code>).</li>
+        </ul>
+
+        <div class="example transition-property-width" style="--transition-property:width; --transition-duration:2s; --transition-timing-function:ease-in-out; --transition-delay:0s;">
+            <h3>Transicion de ancho (width)</h3>
+            <p>En este ejemplo, el ancho de la caja cambia de 100px a 200px al pasar el raton por encima.</p>
+            <div class="box"></div>
+        </div>
+
+        <div class="example transition-property-heigth" style="--transition-property:height; --transition-duration:2s; --transition-timing-function:ease-in-out; --transition-delay:0s;">
+            <h3>Transicion de altura (height)</h3>
+            <p>En este ejemplo, la altura de la caja cambia de 100px a 200px al pasar el raton por encima.</p>
+            <div class="box"></div>
+        </div>
+
+        <div class="example transition-property-color" style="--transition-property:background-color; --transition-duration:2s; --transition-timing-function:ease-in-out; --transition-delay:0s;">
+            <h3>Transicion de color de fondo(background-color)</h3>
+            <p>En este ejemplo, el color de fondo de la caja cambia de azul claro a coral claro al pasar el raton por encima.</p>
+            <div class="box"></div>
+        </div>
+
+        <div class="example transition-property-transform" style="--transition-property:transform; --transition-duration:2s; --transition-timing-function:ease-in-out; --transition-delay:0s;">
+            <h3>Transicion de transformación (transform)</h3>
+            <p>En este ejemplo, la caja rota 45 grados al pasar el raton por encima.</p>
+            <div class="box"></div>
+        </div>
+
+
+        <h2>Animaciones</h2>
+        <p>Las animaciones en Css permiten definir movimientos mas complejos y secuencias de estilo en el tiempo. Utilizas keyframes para definir los estilos en varios puntos a lo largo de la duracion de la animacion</p>
+        <p>Los principales parámetros para definir una animación son: </p>
+        
+        <ul>
+            <li><strong>--animation-name: </strong> el nombre de la animación definida:<code>example-animation</code></li>
+            <li><strong>--transition-duration: </strong> La duracion de la transición (por ejemplo, <code>2s</code> para dos segundos).</li>
+            <li><strong>--animation-timing-function: </strong> La duracion de la transición (por ejemplo, <code>ease-in-out</code> para dos segundos).</li>
+            <li><strong>--animation-delay: </strong> el retraso para que comiense la animacion(por ejemplo, <code>5veces</code>).</li>
+            <li><strong>--animation-iteration-count: </strong> La direccion de la animacion (por ejemplo, <code>infinite</code> para que la animación alterne entre el principo y el final).</li>
+            <li><strong>--animation-direction: </strong> La direccion de la animacion (por ejemplo, <code>alternate</code> para que la animacion alterne entre el principo y el final).</li>
+            <li><strong>--animation-fill-mode: </strong> Define como se aplica el estilo de la animacion antes y despues de la animacion (por ejemplo, <code>forwards</code>para mantener el estilo final despues de la animación).</li>
+        </ul>
+
+            <div class="example animation-example" style="--animation-name:animation-example; --animation-duration:5s;
+             --animation-timing-function:ease-in-out; --animation-delay:5s; --animation-iteration-count:infinite;
+             --animation_direction:alternate; --animation-fill-mode:fordwards;">
+             <h3>Animación de ejemplo</h3>
+             <p>En este ejemplo, la caja cambia de ecolor y posición a lo largo de un ciclo de 5 segundos, repitiendose indefinidamente.</p>
+             <div class="box"></div>
+            </div>
+
+    </div>
+    
+</body>
+</html>

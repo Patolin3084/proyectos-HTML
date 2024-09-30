@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 50px;
+            line-height: 2;
+        }
+        .flexrow{
+            display: flex;
+            flex-direction: row; 
+        }
+        .centrarflex{
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+            border: #f50707;
+            border-style: outset;
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav ul li{
+            padding: 50px;
+            background-size: cover;
+        }
+        nav ul li:nth-child(odd){
+            background-color: rgb(247, 175, 175);
+            background-image: url('https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720');
+        }
+        nav ul li:nth-child(even){
+            background-color: rgb(175, 233, 247);
+            background-image: url('https://www.sopitas.com/site/wp-content/uploads/2015/08/oB4Mr.jpg');
+        }
+        ul li a:hover {
+            color: #f5f5f8;
+            font-size: 50px;
+        }  
+        .forma{
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        }
+
+        .grid-container{
+            display: grid;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 20px 20px 10px grey;
+        }
+        
+        .grid-item{
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid;
+            
+        }
+        .grid-item:hover{
+            box-shadow: 5px 10px #888888;
+        }
+        #grid-columnas{
+            grid-repeat(2, 100px);
+            grid-auto-flow: column; grid-gap: 10px; height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="flexrow centrarflex" >
+                <li class="dropdown forma"><a href="#">inicio</a>  
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                </li>
+                <li class="forma"><a href="#">about us</a></li>
+                <li class="forma"><a href="#">contact</a></li>
+                <li class="forma"><a href="#">blog</a></li>
+            </ul>
+        </nav>
+        <img src="https://marketing4ecommerce.net/wp-content/uploads/2024/02/imagen-generada-con-nightcafe-e1708680739301.jpg" alt="">
+        <p>Lorem fistrum fistro apetecan al ataquerl diodenoo va usté muy cargadoo no te digo trigo por no llamarte Rodrigor te va a hasé pupitaa sexuarl
+            tiene musho peligro ahorarr. A peich a gramenawer a wan al ataquerl qué dise usteer qué dise usteer por la gloria de mi madre no puedor te voy
+            a borrar el cerito diodeno. Mamaar pecador a gramenawer papaar papaar fistro va usté muy cargadoo mamaar tiene musho peligro. De la pradera papaar
+            papaar diodeno al ataquerl torpedo ese hombree no te digo trigo por no llamarte Rodrigor pecador no puedor pecador ahorarr. Benemeritaar a wan tiene
+            musho peligro se calle ustée diodenoo ahorarr te voy a borrar el cerito al ataquerl llevame al sircoo diodenoo apetecan. Papaar papaar a wan me cago
+            en tus muelas de la pradera qué dise usteer de la pradera a gramenawer de la pradera qué dise usteer ese que llega apetecan.
+            Jarl ahorarr sexuarl fistro torpedo ahorarr. Ese hombree diodenoo no te digo trigo por no llamarte Rodrigor ese pedazo de apetecan de la pradera ahorarr
+            papaar papaar me cago en tus muelas. Al ataquerl a wan benemeritaar a peich me cago en tus muelas de la pradera apetecan no te digo trigo por no llamarte
+            Rodrigor. Benemeritaar quietooor pecador benemeritaar ese que llega papaar papaar. A peich te va a hasé pupitaa diodeno se calle ustée. Jarl diodeno ese
+            hombree tiene musho peligro torpedo ese que llega fistro al ataquerl te va a hasé pupitaa.</p>
+
+        <img src="https://media.es.wired.com/photos/641b2076880298eb68cc9b8a/16:9/w_1280,c_limit/Todd_Namban_Create_a_photorrealistic_portrait_of_a_red_fox_usin_cd0b7e04-868d-45d4-beaf-b7515e6154ca.png" alt="">
+        <p>Lorem fistrum te voy a borrar el cerito no puedor benemeritaar te voy a borrar el cerito. Fistro sexuarl mamaar llevame al sircoo va usté muy cargadoo
+            quietooor al ataquerl ese pedazo de papaar papaar. Benemeritaar a gramenawer tiene musho peligro a gramenawer. Jarl a gramenawer se calle ustée qué dise
+            usteer diodeno sexuarl. Apetecan a peich diodenoo se calle ustée ese que llega ese hombree. Condemor llevame al sircoo amatomaa me cago en tus muelas
+            diodeno de la pradera amatomaa jarl sexuarl fistro ese hombree. Hasta luego Lucas ahorarr me cago en tus muelas no puedor mamaar condemor. Diodeno ese
+            que llega te voy a borrar el cerito caballo blanco caballo negroorl me cago en tus muelas amatomaa caballo blanco caballo negroorl apetecan papaar papaar
+            de la pradera. Hasta luego Lucas me cago en tus muelas diodenoo va usté muy cargadoo.</p>
+
+        <br><br>
+
+        <section class="example">
+            <div class="grid-container" id="grid-columnas">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+            </div>
+          
+    </header>
+    <main></main>
+    <footer></footer>
+    
+</body>
+</html>

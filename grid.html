@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostración Completa de CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .grid-container {
+            display: grid;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .example {
+            margin-bottom: 40px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Demostración Completa de CSS Grid</h1>
+    </header>
+
+    <main>
+        <!-- Contenedor Grid Simple -->
+        <section class="example">
+            <h2>Contenedor Grid Simple</h2>
+            <div class="grid-container" style="grid-template-columns: repeat(3, 1fr); grid-gap: 10px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <p>Este contenedor utiliza <code>display: grid;</code> para organizar los elementos en una cuadrícula.</p>
+        </section>
+
+        <!-- Grid Template Columns -->
+        <section class="example">
+            <h2>Grid Template Columns</h2>
+            <div class="grid-container" style="grid-template-columns: 100px 200px 100px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <p>La propiedad <code>grid-template-columns</code> define el tamaño de las columnas de la cuadrícula.</p>
+        </section>
+
+        <!-- Grid Template Rows -->
+        <section class="example">
+            <h2>Grid Template Rows</h2>
+            <div class="grid-container" style="grid-template-rows: 100px 200px 100px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <p>La propiedad <code>grid-template-rows</code> define el tamaño de las filas de la cuadrícula.</p>
+        </section>
+
+        <!-- Grid Gap -->
+        <section class="example">
+            <h2>Grid Gap</h2>
+            <div class="grid-container" style="grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <p>La propiedad <code>grid-gap</code> define el espacio entre los elementos de la cuadrícula.</p>
+        </section>
+
+        <!-- Grid Areas -->
+        <section class="example">
+            <h2>Grid Areas</h2>
+            <div class="grid-container" style="grid-template-areas: 
+                'header header header'
+                'menu main main'
+                'menu footer footer'; grid-gap: 10px;">
+                <div class="grid-item" style="grid-area: header;">Header</div>
+                <div class="grid-item" style="grid-area: menu;">Menu</div>
+                <div class="grid-item" style="grid-area: main;">Main</div>
+                <div class="grid-item" style="grid-area: footer;">Footer</div>
+            </div>
+            <p>La propiedad <code>grid-template-areas</code> define un diseño de 
+                cuadrícula usando nombres de áreas.</p>
+        </section>
+
+        <!-- Justify Content -->
+        <section class="example">
+            <h2>Justify Content</h2>
+            <div class="grid-container" 
+            style="grid-template-columns: repeat(3, 100px); 
+            justify-content: start;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <div class="grid-container" 
+            style="grid-template-columns: repeat(3, 100px); 
+            justify-content: center;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <div class="grid-container" 
+            style="grid-template-columns: repeat(3, 100px); 
+            justify-content: end;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <p>La propiedad <code>justify-content</code> alinea los elementos 
+                de la cuadrícula en el eje horizontal.</p>
+        </section>
+
+        <!-- Align Items -->
+        <section class="example">
+            <h2>Align Items</h2>
+            <div class="grid-container" 
+            style="grid-template-rows: repeat(3, 100px); 
+            align-items: start; height: 400px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <div class="grid-container" 
+            style="grid-template-rows: repeat(3, 100px); 
+            align-items: center; height: 400px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <div class="grid-container" 
+            style="grid-template-rows: repeat(3, 100px); 
+            align-items: end; height: 400px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+            <p>La propiedad <code>align-items</code> alinea los elementos de la 
+                cuadrícula en el eje vertical.</p>
+        </section>
+
+        <!-- Grid Auto Rows and Columns -->
+        <section class="example">
+            <h2>Grid Auto Rows and Columns</h2>
+            <div class="grid-container" style="grid-auto-rows: 100px; 
+            grid-auto-columns: 100px; grid-gap: 10px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+            </div>
+            <p>Las propiedades <code>grid-auto-rows</code> y <code>
+                grid-auto-columns</code> definen el tamaño de las filas y 
+                columnas creadas automáticamente.</p>
+        </section>
+
+        <!-- Grid Auto Flow -->
+        <section class="example">
+            <h2>Grid Auto Flow</h2>
+            <div class="grid-container" 
+            style="grid-template-columns: repeat(2, 100px); 
+            grid-auto-flow: row; grid-gap: 10px; height: 300px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+            </div>
+            <div class="grid-container" 
+            style="grid-template-columns: repeat(2, 100px); 
+            grid-auto-flow: column; grid-gap: 10px; height: 300px;">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+            </div>
+            <p>La propiedad <code>grid-auto-flow</code> controla cómo se colocan
+                 automáticamente los elementos en la cuadrícula.</p>
+        </section>
+    </main>
+</body>
+</html>

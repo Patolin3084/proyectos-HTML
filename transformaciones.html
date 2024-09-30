@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+
+        .example {
+            margin-bottom: 40px;
+        }
+
+        .example div {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: lightblue;
+            transition: transform 0.5s;
+        }
+
+        .example:hover div {
+            transform: var(--transform-example);
+        }
+    </style>
+</head>
+<body>    
+    <div class="container">
+        <h1>Transformaciones CSS</h1>
+        <h2>Transformaciones 2D</h2>
+
+        <!--transformacion-->
+        <div class="example" style="--transform-example:translate(50px, 50px);">
+            <h3>Translate (X, Y)</h3>
+            <p>Mueve un elemento desde su pozicion actual por los valores entre "hotizontal" y "vertical"</p>
+            <div></div>
+        </div>
+
+        <!--rotate-->
+        <div class="example" style="--transform-example:rotate(45deg);">
+            <h3>Rotate (X, Y)</h3>
+            <p>Rota un elemento en sentido horario en (grados)</p>
+            <div></div>
+        </div>
+
+        <!--scale-->
+        <div class="example" style="--transform-example:scale(1.5, 1.5);">
+            <h3>Scale (X,Y)</h3>
+            <p>Escala un elemento hacia arrba o hacia abajo </p>
+            <div></div>
+        </div>
+
+        <!--skew-->
+        <div class="example" style="--transform-example:skew(20deg, 10deg);">
+            <h3>Skew (X,Y)</h3>
+            <p>Inclina un elemento por los angulos dados por los ejes de un elemento X e Y </p>
+            <div></div>
+        </div>
+
+        <!--martix-->
+        <div class="example" style="--transform-example:matrix(1,0.5, -0.5, 0, 1);">
+            <h3>Matrix (a, b, c, d, e, f), matrix (scale x, scale y, skew y, skew x, translate x, translate y)</h3>
+            <p>Aplica una transformacion 2D usando un matriz, los valores representan: escalado, rotacion, traslacion y inclinacion </p>
+            <div></div>
+        </div>
+
+
+        <h2>Transformaciones 3D</h2>
+
+        <!--rotatex-->
+        <div class="example" style="--transform-example:rotateX(45deg);">
+            <h3>RotateX (angulo)</h3>
+            <p>Rota un elemento por el eje X en (grados)</p>
+            <div></div>
+        </div>
+
+        <!--rotatey-->
+        <div class="example" style="--transform-example:rotateY(45deg);">
+            <h3>RotateY (angulo)</h3>
+            <p>Rota un elemento por el eje Y en (grados)</p>
+            <div></div>
+        </div>
+
+        <!--rotatez-->
+        <div class="example" style="--transform-example:rotateZ(45deg);">
+            <h3>RotateZ (angulo)</h3>
+            <p>Rota un elemento por el eje Z en (grados). Similar a transformacion 2D</p>
+            <div></div>
+        </div>
+
+        <!--translate3d-->
+        <div class="example" style="--transform-example:translate3D(50px, 50px, 50px);">
+            <h3>Translate3D x, y, z</h3>
+            <p>Mueve un elemento en el espacio 3D por los ejes X, Y y Z</p>
+            <div></div>
+        </div>
+
+        <!--scale3d-->
+        <div class="example" style="--transform-example:scale3D(1.5, 1.5, 1.5);">
+            <h3>Scale3D x, y, z</h3>
+            <p>Escala un elemento hacia arriba o hacia abajo en el espacio 3D por los factores X, Y y Z</p>
+            <div></div>
+        </div>
+
+        <!--perspective3d-->
+        <div class="example" style="--transform-example:perspective(500px) rotateY(45deg);">
+            <h3>Perspective3D x, y, z</h3>
+            <p>Define la perspectiva desde la cual se ven todos los elementos hijos, afecta  a los elementos hijos transformado en 3d.</p>
+            <div></div>
+        </div>
+
+        <!--matrix3d-->
+        <div class="example" style="--transform-example:matrix3D(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 50, 50, 1);">
+            <h3>Matrix3D a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4, </h3>
+            <p>Aplica una transformacion 3d aplicando una matris de 16 elementos. scalado, rotacion, traslacion e inclinacion en el espacio 3d.</p>
+            <div></div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
